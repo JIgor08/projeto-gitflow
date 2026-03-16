@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS todo_mvc CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE todo_mvc;
+
+CREATE TABLE IF NOT EXISTS tarefas (
+    id         INT AUTO_INCREMENT PRIMARY KEY,
+    titulo     VARCHAR(255) NOT NULL,
+    descricao  TEXT,
+    concluida  TINYINT(1) NOT NULL DEFAULT 0,
+    criado_em  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
