@@ -40,4 +40,11 @@ class Tarefa
         );
         $stmt->execute([$status, $id]);
     }
+
+    public function buscarPorId($id)
+{
+    $stmt = $this->pdo->prepare('SELECT * FROM tarefas WHERE id = ?');
+    $stmt->execute([$id]);
+    return $stmt->fetch();
+}
 }

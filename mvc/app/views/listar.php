@@ -1,5 +1,5 @@
 <?php
-require_once 'Tarefa.php';
+require_once __DIR__ . '/../models/tarefa.php';
 $model = new Tarefa();
 $tarefas = $model->listarTodas();
 ?>
@@ -8,7 +8,7 @@ $tarefas = $model->listarTodas();
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="../../public/css/style.css" />
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
     <title>Minhas Tarefas</title>
 </head>
@@ -26,7 +26,6 @@ $tarefas = $model->listarTodas();
                 <th>Status</th>
                 <th>Ações</th>
                 <th class="status-col">Concluída?</th>
-                
             </tr>
         </thead>
 
@@ -44,17 +43,17 @@ $tarefas = $model->listarTodas();
 
                     <td>
 
-                        <form action="deletar.php" method="POST" style="display:inline">
+                        <form action="../controllers/deletar.php" method="POST" style="display:inline">
                             <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
                             <button type="submit" class="btn btn-deletar">Deletar</button>
                         </form>
 
-                        <a href="editar.php?id=<?= $tarefa['id'] ?>" class="btn btn-editar">Editar</a>
+                        <a href="../controllers/editar.php?id=<?= $tarefa['id'] ?>" class="btn btn-editar">Editar</a>
 
                     </td>
 
                     <td class="status-col">
-                        <form action="mudar_status.php" method="POST" style="display:inline">
+                        <form action="../controllers/mudar_status.php" method="POST" style="display:inline">
                             <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
 
                             <input
@@ -73,13 +72,11 @@ $tarefas = $model->listarTodas();
 
     </table>
 
-
     <br>
     <hr>
     <br>
 
     <a href="menu.html" class="botao"><strong>Voltar ao Menu Principal</strong></a>
-
 
 </body>
 

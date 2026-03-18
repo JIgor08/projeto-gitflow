@@ -1,12 +1,6 @@
 <?php
-require_once 'Tarefa.php';
+require_once __DIR__ . '/../models/tarefa.php';
 $model = new Tarefa();
-
-$id = $_POST['id'];
-
-$model->deletar($id);
-
-header('Location: listar.php');
+$model->deletar($_POST['id']);
+header('Location: ../views/listar.php');
 exit;
-?>
-

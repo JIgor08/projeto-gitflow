@@ -7,20 +7,20 @@
       content="no-cache, no-store, must-revalidate"
     />
     <title>Gerenciador de Tarefas Diárias</title>
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="../../public/css/style.css" />
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
   </head>
   
   <body>
     <h1>Gerenciador de Tarefas Diárias</h1>
-    <form action="criar.php" method="POST">
+    <form action="../controllers/criar.php" method="POST">
       <input type="text" name="tarefa" placeholder="Nova Tarefa..." />
       <button type="submit"><strong>Registrar</strong></button>
     </form>
     <br />
     <hr />
     <br />
-    <a href="listar.php" class="botao"
+    <a href="../views/listar.php" class="botao"
       ><strong>Ver tarefas cadastradas</strong></a
     >
   </body>

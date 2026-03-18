@@ -1,13 +1,6 @@
 <?php
-require_once 'Tarefa.php';
-
+require_once __DIR__ . '/../models/tarefa.php';
 $model = new Tarefa();
-
-$id = $_POST['id'];
-$status = isset($_POST['status']) ? 1 : 0;
-
-$model->mudarStatus($id, $status);
-
-
-header('Location: listar.php');
+$model->mudarStatus($_POST['id'], isset($_POST['status']) ? 1 : 0);
+header('Location: ../views/listar.php');
 exit;
