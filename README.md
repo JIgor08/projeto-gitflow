@@ -54,7 +54,7 @@ Desenvolver uma aplicação funcional de gerenciamento de tarefas aplicando boas
 
 ## 🎬 Vídeo de Apresentação
 
-> 🔧 Em desenvolvimento
+> https://youtu.be/_cv6TcK5txg
 
 O vídeo apresentará:
 - Descrição do projeto
