@@ -6,7 +6,7 @@ $model = new Tarefa();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $model->editar($_POST['id'], $_POST['titulo']);
-    header('Location: listar.php');
+    header('Location: ../views/listar.php');
     exit;
 }
 
@@ -18,8 +18,8 @@ $tarefa = $model->buscarPorId($_GET['id']);
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="shortcut icon" href="../views/img/logo.png" type="image/x-icon" />
     <title>Editar Tarefa</title>
 </head>
 
